@@ -1,0 +1,68 @@
+.advantage {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.adv-list {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adv-item::before {
+  content: "";
+  height: 120px;
+  display: block;
+
+  background-size: 65px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $grey-bkg;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.adv-detail::before {
+  background-image: url(../images/hero/icons/antenna.svg);
+}
+
+.adv-punctual::before {
+  background-image: url(../images/hero/icons/clock1.svg);
+}
+
+.adv-planing::before {
+  background-image: url(../images/hero/icons/diagram1.svg);
+}
+
+.adv-tech::before {
+  background-image: url(../images/hero/icons/astronaut1.svg);
+}
+
+.adv-item {
+  margin: 15px;
+  text-align: center;
+  width: calc(100% - 30px);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px * 2) / 2);
+    text-align: left;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 4) / 4);
+  }
+}
+// .adv-item:not(:last-child) {
+//   margin-right: 30px;
+// }
+
+.advantage-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.text {
+  margin: 0px;
+}

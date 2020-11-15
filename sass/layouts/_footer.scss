@@ -1,0 +1,117 @@
+footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+footer .logo {
+  color: $background-color;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footer-adress {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $background-color;
+  font-style: normal;
+  text-decoration: none;
+  margin-bottom: 9px;
+}
+
+.black-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.black-link .social-logo {
+  fill: $background-color;
+}
+
+.futer-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0px;
+  color: $background-color;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  justify-content: center;
+}
+
+.futer-block {
+  margin: 15px;
+  text-align: center;
+  width: calc(100% - 30px);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px * 2) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 4) / 4);
+  }
+}
+
+.dark {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mailing-block {
+  margin: 15px;
+  text-align: center;
+  width: calc(100% - 30px);
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 30px * 4) / 2 + 30px);
+  }
+}
+
+.mailing-button {
+  display: inline-flex;
+  align-items: center;
+  color: $background-color;
+  background-color: $focus-color;
+  min-width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 13px 10px 29px;
+  border: 0px;
+  line-height: 1.875;
+  border-radius: 4px;
+}
+
+.mailing-icon {
+  width: 24px;
+  height: 24px;
+  fill: $background-color;
+  margin-left: 10px;
+}
+
+.mailing-input {
+  width: 100%;
+  max-width: 450px;
+  color: $background-color;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2f303a;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    max-width: 358px;
+    display: inline-block;
+    margin-bottom: 0px;
+  }
+}
