@@ -17,7 +17,7 @@
 	<header>
 		<div class="container flex-nav">
 			<nav class="main-nav">
-				<a href="./index.html" class="logo">
+				<a class="logo" href="./index.html">
 					<span class="logo-focus">Web</span>
 					Studio
 				</a>
@@ -28,13 +28,14 @@
 					<li class="nav-item">
 						<a class="link active" href="./portfolio.html">Портфолио</a>
 					</li>
-					<li class="nav-item"><a class="link" href="">Контакты</a></li>
+					<li class="nav-item">
+						<a class="link" href="">Контакты</a>
+					</li>
 				</ul>
 			</nav>
-			<ul class="site-nav">
+			<ul class="site-nav header-contacts">
 				<li class="nav-item">
-					<a class="header-contacts link" target="_blank" rel="noopener noreferer"
-						href="mailto:info@example.com">
+					<a class="link header-contacts" target="_blank" rel="noopener noreferer" href="mailto:info@example.com">
 						<svg class="contacts-logo">
 							<use href="./images/phone/symbol-defs.svg#icon-envelope"></use>
 						</svg>
@@ -42,8 +43,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="link header-contacts" target="_blank" rel="noopener noreferer"
-						href="href"="tel:+380991111111">
+					<a class="link header-contacts" target="_blank" rel="noopener noreferer" href="tel:+380991111111">
 						<svg class="contacts-logo">
 							<use href="./images/phone/symbol-defs.svg#icon-smartphone"></use>
 						</svg>
@@ -52,6 +52,57 @@
 				</li>
 			</ul>
 		</div>
+	
+		<div class="mobile-header">
+			<div class="mobile-nav">
+				<a href="" class="logo" href="./index.html">
+					<span class="logo-focus">Web</span>
+					Studio
+				</a>
+				<button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container"
+					data-menu-button>
+					<svg width="19" height="19" aria-label="Переключатель мобильного окна">
+						<use class="icone-cross" href="./images/phone/menu-sprite.svg#icon-close_24px"></use>
+						<use class="icone-menu" href="./images/phone/menu-sprite.svg#icon-menu_24px"></use>
+					</svg>
+	
+	
+				</button>
+			</div>
+			<div class="menu-container" id="menu-container" data-menu>
+				<ul class="menu-nav">
+					<li class="menu-item">
+						<a class="link" href="./index.html">Студия</a>
+					</li>
+					<li class="menu-item">
+						<a class="link active" href="./portfolio.html">Портфолио</a>
+					</li>
+					<li class="menu-item">
+						<a class="link" href="">Контакты</a>
+					</li>
+				</ul>
+				<ul class="menu-adress">
+					<li class="adress-item">
+						<a class="link header-contacts" target="_blank" rel="noopener noreferer"
+							href="mailto:info@example.com">
+							<svg class="contacts-logo">
+								<use href="./images/phone/symbol-defs.svg#icon-envelope"></use>
+							</svg>
+							info@example.com
+						</a>
+					</li>
+					<li class="adress-item">
+						<a class="link header-contacts" target="_blank" rel="noopener noreferer" href="tel:+380991111111">
+							<svg class="contacts-logo">
+								<use href="./images/phone/symbol-defs.svg#icon-smartphone"></use>
+							</svg>
+							+38 096 111 11 11
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
 	</header>
 	<main>
 		<section class="section">
@@ -77,8 +128,24 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 						<div class="image-overlay">
-							<img class="img-block" src="./images/portfolio/img.jpg" width="370" height="294"
-								alt="Картинка Технокряк" />
+							<picture>
+								<source srcset="./images/examples-1-450img@1x.webp 1x, ./images/examples-1-450img@2x.webp 2x" media="(max-width: 767px)"
+									type="image/webp" />
+								<source srcset="./images/examples-1-354img@1x.webp 1x, ./images/examples-1-354img@2x.webp 2x"
+									media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+								<source srcset="./images/examples-1-370img@1x.webp 1x, ./images/examples-1-370img@2x.webp 2x" media="(min-width: 1200px)"
+									type="image/webp" />
+							
+								<source srcset="./images/examples-1-450img@1x.jpg 1x, ./images/examples-1-450img@2x.jpg 2x" media="(max-width: 767px)" />
+								<source srcset="./images/examples-1-354img@1x.jpg 1x, ./images/examples-1-354img@2x.jpg 2x"
+									media="(min-width: 768px) and (max-width: 1199px)" />
+								<source srcset="./images/examples-1-370img@1x.jpg 1x, ./images/examples-1-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+							
+								<img loading="lazy" class="img-block" src="./images/examples-1-354img@1x.jpg" width="450"
+									alt="Картинка Технокряк" />
+							</picture>
+							
+								
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -92,8 +159,24 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-							<img class="img-block" src="./images/portfolio/img-1.jpg" width="370" height="294"
-							alt="Картинка Постер New Orlean vs Golden Star" />
+								<picture>
+									<source srcset="./images/examples-2-450img@1x.webp 1x, ./images/examples-2-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-2-354img@1x.webp 1x, ./images/examples-2-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-2-370img@1x.webp 1x, ./images/examples-2-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-2-450img@1x.jpg 1x, ./images/examples-2-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-2-354img@1x.jpg 1x, ./images/examples-2-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-2-370img@1x.jpg 1x, ./images/examples-2-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-2-354img@1x.jpg" width="450"
+										alt="Постер с двумя баскетболистами" />
+								</picture>
+							
+							
 							<div class="text-image">Технокряк это современная площадка распространения
 							коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 							защищённые сервера конкурентов.</div>
@@ -107,8 +190,24 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-2.jpg" width="370" height="294"
-							alt="Картинка Ресторан Seafood" />
+								<picture>
+									<source srcset="./images/examples-3-450img@1x.webp 1x, ./images/examples-3-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-3-354img@1x.webp 1x, ./images/examples-3-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-3-370img@1x.webp 1x, ./images/examples-3-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-3-450img@1x.jpg 1x, ./images/examples-3-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-3-354img@1x.jpg 1x, ./images/examples-3-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-3-370img@1x.jpg 1x, ./images/examples-3-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-3-354img@1x.jpg" width="450"
+										alt="Картинка Ресторан Seafood" />
+								</picture>
+						
+							
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -122,8 +221,22 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-3.jpg" width="370" height="294"
-							alt="Картинка Проект Prime" />
+								<picture>
+									<source srcset="./images/examples-4-450img@1x.webp 1x, ./images/examples-4-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-4-354img@1x.webp 1x, ./images/examples-4-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-4-370img@1x.webp 1x, ./images/examples-4-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-4-450img@1x.jpg 1x, ./images/examples-4-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-4-354img@1x.jpg 1x, ./images/examples-4-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-4-370img@1x.jpg 1x, ./images/examples-4-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-4-354img@1x.jpg" width="450" alt="Картинка Проект Prime" />
+								</picture>
+						
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -137,8 +250,23 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-4.jpg" width="370" height="294"
-							alt="Картинка Проект Boxes" />
+								<picture>
+									<source srcset="./images/examples-5-450img@1x.webp 1x, ./images/examples-5-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-5-354img@1x.webp 1x, ./images/examples-5-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-5-370img@1x.webp 1x, ./images/examples-5-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-5-450img@1x.jpg 1x, ./images/examples-5-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-5-354img@1x.jpg 1x, ./images/examples-5-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-5-370img@1x.jpg 1x, ./images/examples-5-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-5-354img@1x.jpg" width="450"
+										alt="Картинка Проект Boxes" />
+								</picture>
+						
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -152,8 +280,22 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-5.jpg" width="370" height="294"
-							alt="Картинка Inspiration has no Borders" />
+								<picture>
+									<source srcset="./images/examples-6-450img@1x.webp 1x, ./images/examples-6-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-6-354img@1x.webp 1x, ./images/examples-6-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-6-370img@1x.webp 1x, ./images/examples-6-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-6-450img@1x.jpg 1x, ./images/examples-6-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-6-354img@1x.jpg 1x, ./images/examples-6-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-6-370img@1x.jpg 1x, ./images/examples-6-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-6-354img@1x.jpg" width="450" alt="Картинка Inspiration has no Borders" />
+								</picture>
+				
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -167,8 +309,22 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-6.jpg" width="370" height="294"
-							alt="Картинка Издание Limited Edition" />
+								<picture>
+									<source srcset="./images/examples-7-450img@1x.webp 1x, ./images/examples-7-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-7-354img@1x.webp 1x, ./images/examples-7-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-7-370img@1x.webp 1x, ./images/examples-7-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-7-450img@1x.jpg 1x, ./images/examples-7-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-7-354img@1x.jpg 1x, ./images/examples-7-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-7-370img@1x.jpg 1x, ./images/examples-7-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-7-354img@1x.jpg" width="450" alt="Картинка Издание Limited Edition" />
+								</picture>
+						
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -182,8 +338,22 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-7.jpg" width="370" height="294"
-							alt="Картинка Проект LAB" />
+								<picture>
+									<source srcset="./images/examples-8-450img@1x.webp 1x, ./images/examples-8-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-8-354img@1x.webp 1x, ./images/examples-8-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-8-370img@1x.webp 1x, ./images/examples-8-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-8-450img@1x.jpg 1x, ./images/examples-8-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-8-354img@1x.jpg 1x, ./images/examples-8-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-8-370img@1x.jpg 1x, ./images/examples-8-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-8-354img@1x.jpg" width="450" alt="Картинка Проект LAB" />
+								</picture>
+						
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>
@@ -197,8 +367,23 @@
 					<li class="portfolio-item">
 						<a href="" class="portfolio-card">
 							<div class="image-overlay">
-						<img class="img-block" src="./images/portfolio/img-8.jpg" width="370" height="294"
-							alt="Картинка Growing Business" />
+								<picture>
+									<source srcset="./images/examples-9-450img@1x.webp 1x, ./images/examples-9-450img@2x.webp 2x" media="(max-width: 767px)"
+										type="image/webp" />
+									<source srcset="./images/examples-9-354img@1x.webp 1x, ./images/examples-9-354img@2x.webp 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" />
+									<source srcset="./images/examples-9-370img@1x.webp 1x, ./images/examples-9-370img@2x.webp 2x" media="(min-width: 1200px)"
+										type="image/webp" />
+								
+									<source srcset="./images/examples-9-450img@1x.jpg 1x, ./images/examples-9-450img@2x.jpg 2x" media="(max-width: 767px)" />
+									<source srcset="./images/examples-9-354img@1x.jpg 1x, ./images/examples-9-354img@2x.jpg 2x"
+										media="(min-width: 768px) and (max-width: 1199px)" />
+									<source srcset="./images/examples-9-370img@1x.jpg 1x, ./images/examples-9-370img@2x.jpg 2x" media="(min-width: 1200px)" />
+								
+									<img loading="lazy" class="img-block" src="./images/examples-9-354img@1x.jpg" width="450"
+										alt="Картинка Growing Business" />
+								</picture>
+						
 							<div class="text-image">Технокряк это современная площадка распространения
 								коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
 								защищённые сервера конкурентов.</div>

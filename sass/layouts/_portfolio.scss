@@ -74,7 +74,11 @@
   position: relative;
   overflow: hidden;
 }
-
+.img-block {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .text-image {
   position: absolute;
   width: 100%;
@@ -90,7 +94,8 @@
   transform: translateY(100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  .portfolio-card:hover &, .portfolio-card:focus &  {
+  .portfolio-card:hover &,
+  .portfolio-card:focus & {
     transform: translateY(0%);
   }
 }
