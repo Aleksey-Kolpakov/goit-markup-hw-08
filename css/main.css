@@ -358,13 +358,13 @@ header {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1200px;
     padding-top: 200px;
     padding-bottom: 280px;
   }
 }
 
 .overlay {
+  max-width: 1600px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
