@@ -1130,6 +1130,7 @@ footer .logo {
 }
 
 .portfolio-card {
+  display: block;
   text-decoration: none;
   color: #757575;
 }
