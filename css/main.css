@@ -365,7 +365,7 @@ header {
 }
 
 .overlay {
-  height: 400px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -382,7 +382,6 @@ header {
 
 @media screen and (min-width: 768px) {
   .overlay {
-    max-width: 768px;
     padding: 118px 60px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-768@1x.jpg);
   }
@@ -396,7 +395,6 @@ header {
 
 @media screen and (min-width: 1200px) {
   .overlay {
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-1600@1x.jpg);
@@ -726,6 +724,7 @@ footer .logo {
 
 @media screen and (min-width: 1200px) {
   .futer-block {
+    text-align: left;
     width: calc((100% - 30px * 4) / 4);
   }
 }
@@ -743,6 +742,7 @@ footer .logo {
 @media screen and (min-width: 1200px) {
   .mailing-block {
     width: calc((100% - 30px * 4) / 2 + 30px);
+    text-align: left;
   }
 }
 
@@ -930,7 +930,7 @@ footer .logo {
 }
 
 .checkbox-label {
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   font-size: 12px;
@@ -955,6 +955,7 @@ footer .logo {
 }
 
 .checkbox-icon {
+  display: inline-block;
   margin-right: 9px;
   width: 16px;
   height: 15px;
