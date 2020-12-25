@@ -126,7 +126,7 @@
 }
 
 .checkbox-label {
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
 
@@ -149,6 +149,7 @@
 }
 
 .checkbox-icon {
+  display: inline-block;
   margin-right: 9px;
   width: 16px;
   height: 15px;
